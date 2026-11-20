@@ -1,0 +1,12 @@
+# Build & Test Outputs
+bin/
+obj/
+artifacts/
+TestResults/
+*.nupkg
+*.snupkg
+.vs/
+.vscode/
+*.user
+*.suo
+.DS_Store

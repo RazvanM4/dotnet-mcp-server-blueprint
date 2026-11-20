@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/RazvanApps.McpServer.Blueprint/RazvanApps.McpServer.Blueprint.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/RazvanApps.McpServer.Blueprint.Tests/RazvanApps.McpServer.Blueprint.Tests.csproj" />
+  </Folder>
+</Solution>

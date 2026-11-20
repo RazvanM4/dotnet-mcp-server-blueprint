@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <PackageId>RazvanApps.McpServer.Blueprint</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Razvan Mares</Authors>
+    <Company>RazvanApps</Company>
+    <Description>Production-ready .NET 10 MCP server blueprint with stdio and Streamable HTTP transports, typed tools, trust-boundary checks, and Official MCP Registry support.</Description>
+    <Copyright>Copyright (c) 2026 Razvan Mares</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://razvanmares.ro/en/blog/build-a-production-ready-mcp-server-in-c-tools-trust-and-transport</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/RazvanApps/dotnet-mcp-server-blueprint</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>mcp;model-context-protocol;dotnet;ai-agents;blueprint;stdio;http</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <PackAsTool>true</PackAsTool>
+    <IsPackable>true</IsPackable>
+    <ToolCommandName>razvanapps-mcp-blueprint</ToolCommandName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ModelContextProtocol" Version="2.4.0" />
+    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="2.4.0" />
+  </ItemGroup>
+
+</Project>
