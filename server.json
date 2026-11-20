@@ -1,18 +1,18 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.RazvanApps/dotnet-mcp-server-blueprint",
+  "name": "io.github.RazvanM4/dotnet-mcp-server-blueprint",
   "title": "RazvanApps .NET 10 MCP Server Blueprint",
   "description": "Production .NET 10 MCP server blueprint with stdio & HTTP transports and trust-boundary tools.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
-    "url": "https://github.com/RazvanApps/dotnet-mcp-server-blueprint",
+    "url": "https://github.com/RazvanM4/dotnet-mcp-server-blueprint",
     "source": "github"
   },
   "packages": [
     {
       "registryType": "nuget",
       "identifier": "RazvanApps.McpServer.Blueprint",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "transport": {
         "type": "stdio"
       }

@@ -74,7 +74,7 @@ public sealed class TrustBoundaryEvaluatorTests
         var json = $$"""
             {
               "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-              "name": "io.github.RazvanApps/example",
+              "name": "io.github.RazvanM4/example",
               "description": "{{longDesc}}",
               "version": "1.0.0",
               "packages": [{ "registryType": "nuget", "identifier": "Example", "version": "1.0.0", "transport": { "type": "stdio" } }]

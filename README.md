@@ -1,4 +1,4 @@
-<!-- mcp-name: io.github.RazvanApps/dotnet-mcp-server-blueprint -->
+<!-- mcp-name: io.github.RazvanM4/dotnet-mcp-server-blueprint -->
 
 # .NET 10 MCP Server Blueprint
 

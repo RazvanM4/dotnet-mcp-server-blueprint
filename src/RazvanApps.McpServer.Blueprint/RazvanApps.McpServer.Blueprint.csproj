@@ -7,14 +7,14 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 
     <PackageId>RazvanApps.McpServer.Blueprint</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Razvan Mares</Authors>
     <Company>RazvanApps</Company>
     <Description>Production-ready .NET 10 MCP server blueprint with stdio and Streamable HTTP transports, typed tools, trust-boundary checks, and Official MCP Registry support.</Description>
     <Copyright>Copyright (c) 2026 Razvan Mares</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://razvanmares.ro/en/blog/build-a-production-ready-mcp-server-in-c-tools-trust-and-transport</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/RazvanApps/dotnet-mcp-server-blueprint</RepositoryUrl>
+    <RepositoryUrl>https://github.com/RazvanM4/dotnet-mcp-server-blueprint</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>mcp;model-context-protocol;dotnet;ai-agents;blueprint;stdio;http</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>

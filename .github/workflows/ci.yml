@@ -32,7 +32,7 @@ jobs:
 
       - name: Validate server.json schema metadata
         run: |
-          python3 -c "import json; d=json.load(open('server.json')); assert len(d['description'])<=100; assert d['name'].startswith('io.github.RazvanApps/')"
+          python3 -c "import json; d=json.load(open('server.json')); assert len(d['description'])<=100; assert d['name'].startswith('io.github.RazvanM4/')"
 
       - name: Upload NuGet artifact
         uses: actions/upload-artifact@v4
