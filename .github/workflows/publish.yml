@@ -1,0 +1,66 @@
+name: Publish NuGet & Official MCP Registry
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore, build, test, and pack
+        run: |
+          dotnet restore
+          dotnet build --configuration Release --no-restore
+          dotnet test --configuration Release --no-build --verbosity normal
+          dotnet pack src/RazvanApps.McpServer.Blueprint/RazvanApps.McpServer.Blueprint.csproj --configuration Release --no-build -o ./artifacts
+
+      - name: NuGet Trusted Publishing Login (OIDC)
+        uses: NuGet/login@v1
+        id: nuget-login
+        with:
+          user: RazvanMares
+
+      - name: Push package to NuGet.org
+        run: |
+          dotnet nuget push ./artifacts/*.nupkg \
+            --api-key "${{ steps.nuget-login.outputs.NUGET_API_KEY }}" \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate
+
+      - name: Wait for NuGet.org indexing
+        run: |
+          for i in $(seq 1 36); do
+            flat=$(curl -s -o /dev/null -w "%{http_code}" https://api.nuget.org/v3-flatcontainer/razvanapps.mcpserver.blueprint/index.json)
+            reg=$(curl -s -o /dev/null -w "%{http_code}" https://api.nuget.org/v3/registration5-gz-semver2/razvanapps.mcpserver.blueprint/index.json)
+            echo "Attempt $i: flatcontainer=$flat registration=$reg"
+            if [ "$flat" = "200" ] && [ "$reg" = "200" ]; then
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Timed out waiting for NuGet indexing"
+          exit 1
+
+      - name: Download and validate mcp-publisher
+        run: |
+          curl -sSL https://github.com/modelcontextprotocol/registry/releases/download/v1.8.9/mcp-publisher_linux_amd64.tar.gz | tar -xz mcp-publisher
+          chmod +x ./mcp-publisher
+          ./mcp-publisher validate
+
+      - name: Login & publish to Official MCP Registry (GitHub OIDC)
+        run: |
+          ./mcp-publisher login github-oidc
+          ./mcp-publisher publish
