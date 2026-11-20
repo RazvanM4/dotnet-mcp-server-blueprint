@@ -42,14 +42,14 @@ jobs:
 
       - name: Wait for NuGet.org indexing
         run: |
-          for i in $(seq 1 36); do
+          for i in $(seq 1 120); do
             flat=$(curl -s -o /dev/null -w "%{http_code}" https://api.nuget.org/v3-flatcontainer/razvanapps.mcpserver.blueprint/index.json)
             reg=$(curl -s -o /dev/null -w "%{http_code}" https://api.nuget.org/v3/registration5-gz-semver2/razvanapps.mcpserver.blueprint/index.json)
             echo "Attempt $i: flatcontainer=$flat registration=$reg"
             if [ "$flat" = "200" ] && [ "$reg" = "200" ]; then
               exit 0
             fi
-            sleep 10
+            sleep 15
           done
           echo "Timed out waiting for NuGet indexing"
           exit 1
