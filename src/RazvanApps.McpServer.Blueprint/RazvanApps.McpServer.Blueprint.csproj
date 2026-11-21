@@ -13,7 +13,7 @@
     <Description>Production-ready .NET 10 MCP server blueprint with stdio and Streamable HTTP transports, typed tools, trust-boundary checks, and Official MCP Registry support.</Description>
     <Copyright>Copyright (c) 2026 Razvan Mares</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://razvanmares.ro/en/blog/build-a-production-ready-mcp-server-in-c-tools-trust-and-transport</PackageProjectUrl>
+    <PackageProjectUrl>https://razvanmares.com/blog/build-a-production-ready-mcp-server-in-c-tools-trust-and-transport</PackageProjectUrl>
     <RepositoryUrl>https://github.com/RazvanM4/dotnet-mcp-server-blueprint</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>mcp;model-context-protocol;dotnet;ai-agents;blueprint;stdio;http</PackageTags>

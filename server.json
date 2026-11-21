@@ -4,6 +4,7 @@
   "title": "RazvanApps .NET 10 MCP Server Blueprint",
   "description": "Production .NET 10 MCP server blueprint with stdio & HTTP transports and trust-boundary tools.",
   "version": "1.0.1",
+  "websiteUrl": "https://razvanmares.com",
   "repository": {
     "url": "https://github.com/RazvanM4/dotnet-mcp-server-blueprint",
     "source": "github"

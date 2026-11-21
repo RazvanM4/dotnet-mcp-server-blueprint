@@ -5,8 +5,8 @@
 A production-ready reference implementation of a **Model Context Protocol (MCP)** server built on **.NET 10** and the official C# SDK (`ModelContextProtocol` & `ModelContextProtocol.AspNetCore`).
 
 Designed as an end-to-end companion to:
-- [Build a Production-Ready MCP Server in C#: Tools, Trust, and Transport](https://razvanmares.ro/en/blog/build-a-production-ready-mcp-server-in-c-tools-trust-and-transport)
-- [Inside the Official MCP Registry: A Supply Chain for AI Tools](https://razvanmares.ro/en/blog/inside-the-official-mcp-registry-a-supply-chain-for-ai-tools)
+- [Build a Production-Ready MCP Server in C#: Tools, Trust, and Transport](https://razvanmares.com/blog/build-a-production-ready-mcp-server-in-c-tools-trust-and-transport)
+- [Inside the Official MCP Registry: A Supply Chain for AI Tools](https://razvanmares.com/blog/inside-the-official-mcp-registry-a-supply-chain-for-ai-tools)
 
 ---
 
@@ -63,4 +63,4 @@ dotnet pack src/RazvanApps.McpServer.Blueprint -c Release -o ./artifacts
 
 ## License
 
-MIT — [Răzvan Mareș (RazvanApps)](https://razvanmares.ro)
+MIT — [Răzvan Mareș (RazvanApps)](https://razvanmares.com)
